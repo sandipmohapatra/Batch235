@@ -1,0 +1,59 @@
+HTML :- Hyper text markup language.
+It is used to develop webpages.
+It is user friendly.We have lot of html tags.It in not case sensitive.
+It is a frontend.It is used to develop the view.
+It is made attractive and user friendly so that people fill happy while using it.
+-------------------------------------------------------
+
+step 1:google.com/maps
+
+step 2:search for the location
+
+step 3:share
+
+step 4:embed a map
+
+step 5:copy HTML 
+
+step 6:paste the <iframe> link on your webpage or html page
+
+--------------------------------------------------------------------------------------------------
+google forms
+----------------------
+step 1:-google.com/forms
+
+step 2:-https://docs.google.com/forms/u/0/
+
+step 3:-blank form
+
+step 4:-create the questions
+
+step 5:-Responses--view in a sheet
+
+step 6:-select the spreadsheet
+
+step 7:-send
+
+step 8:-send form
+
+step 9:-<> embed form
+
+step 10:- copy 
+
+step 11:- paste in  your html page.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
