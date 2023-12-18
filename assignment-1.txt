@@ -1,0 +1,13 @@
+Assignment-1
+Hospital Management
+-------------------------------
+1)home page
+2)Patient Registration page
+3)Docter available and timing in a Table 
+4)Doctor appointment
+5)Hospital Contact page
+6)Book an Ambulance
+7)Payment Page
+8)Feedback page
+--------------------------------------------------------------------------
+*Pages should be very attractive
