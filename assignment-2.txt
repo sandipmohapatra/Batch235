@@ -1,0 +1,11 @@
+Hotel Management
+-------------------------------
+1)home page
+2)registration page
+3)book a hotel
+4)contact page
+5)Feedback page
+6)price list for day
+7)source destination
+
+using BootStrap
