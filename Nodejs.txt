@@ -27,7 +27,7 @@ res.writeHead(200,{'Content-Type':'text/html'});
 res.write("This is weekend Nodejs Batch");
 res.write("This is Akshya and Pratiksha");
 res.end();
-}).listen(8090);
+}).listen(8070);
 ----------------------------------------------------------------------------
 example-2
 -----------------------
@@ -87,17 +87,17 @@ select * from student;
 ----------------------------------------------------------------------------
 create table employee (empno int,name varchar(30),address varchar(30));
 to add some more columns
-alter table student add phy int;
-alter table student add bio int;
-alter table student add chem int;
-alter table student add tot int;
-alter table student add avg int;
-update student set phy=88,chem=83,bio=74 where rollno=101;
-update student set phy=78,chem=73,bio=84 where rollno=102;
-update student set phy=68,chem=63,bio=64 where rollno=103;
-update student set phy=78,chem=73,bio=84 where rollno=102;
-update student set tot=phy+chem+bio ;
-update student set avg=tot/3;
+alter table student12 add phy int;
+alter table student12 add bio int;
+alter table student12 add chem int;
+alter table student12 add tot int;
+alter table student12 add avg int;
+update student12 set phy=88,chem=83,bio=74 where studid=1;
+update student12 set phy=78,chem=73,bio=84 where studid=2;
+update student12 set phy=68,chem=63,bio=64 where studid=3;
+update student12 set phy=78,chem=73,bio=84 where studid=4;
+update student12 set tot=phy+chem+bio ;
+update student12 set avg=tot/3;
 
 to delete a row
 delete from student where rollno=101;
@@ -120,7 +120,7 @@ to drop database
 4)drop database cognizantstud;
 -----------------------------------------------------------------------
 to create a table
-5)create table student
+5)create table student12
 ( studid int not null auto_increment,
 name varchar(30) not null,
 address varchar(30) not null,
@@ -265,7 +265,7 @@ con.connect(function (err)
 {
 if(err) throw err;
 console.log("Database connected");
-con.query("create database mphasis",function(err,result)
+con.query("create database mphasis2024",function(err,result)
 {
 if(err) throw err;
 console.log("Database created");
@@ -280,7 +280,7 @@ var con=mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"1234",
-    database:"cognizant"
+    database:"mphasis235"
 });
 
 con.connect(function (err)
@@ -303,7 +303,7 @@ var con=mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"1234",
-    database:"mphasis"
+    database:"mphasis235"
 });
 
 con.connect(function (err)
@@ -339,7 +339,7 @@ var abc="SELECT * FROM student WHERE address = 'bangalore' ";
     console.log(result);
   });
 });
-----------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------Explain------------------------------------------------------------------------------------
 step 1:-import myql package
 var mysql = require('mysql');
 --------------------------------------------------------------------
@@ -597,7 +597,7 @@ RDBMS			Mongodb
 -------------------------------------------------------------------
 Table			collection
 database			database
-Tuple/row			document
+Tuple/row		document
 column			field
 table join			embedded document
 PrimaryKey		default key_id provided by mongodb itself
@@ -661,6 +661,32 @@ db.student.update({email:'sunil@gmail.com'},{$set:{password:'sunil@1'}});
 10)to delete the document
 db.student.remove({username:'susmita'});
 ----------------------------------------------------------------
+11)to drop database
+switch into the same database
+db.dropDatabase();
+------------------------------------------------------
+12)to sort the documents
+
+db.COLLECTION_NAME.find().sort({KEY:1})
+ascending
+db.student.find().sort({name:1}).pretty();
+descending
+db.student.find().sort({name:-1}).pretty();
+-------
+ascending
+db.student.find().sort({address:1}).pretty();
+descending
+db.student.find().sort({address:-1}).pretty();
+-----------------------------------------------------------
+Limit :- to display limited records
+db.student.find().limit(1).pretty();
+db.student.find().limit(2).pretty();
+
+--------------------------------------------------------------
+13)to drop collection/table
+
+db.student.drop()
+--------------------------------------------------------------
 npm install mongodb
 ---------------------------------------
 example-1
