@@ -1,0 +1,95 @@
+Routing :- Navigating to different pages.
+Angular support Single Page Application.[SPA]
+During BootStrap,html project we need to write the nav bar in every page.
+But in Angular we have to write the nav bar in single page.From this page other pages will be called.
+So angular is fast compare to Bootstrap and html project.
+In angular the nav bar ,footer ,left,right side will be constant.Only the body part will change which makes angular project run faster.
+------------------------------------------------------------------------------
+Angular menu bar can be created with using Html or Bootstrap.
+---------------------------------------------------------------------------------------------
+app.component.ts
+--------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template:` My Project <ul>
+    <li> <a [routerLink]="['/register']">Register</a></li>
+    <li> <a [routerLink]="['/contact']">Contact</a></li>
+    <li> <a [routerLink]="['/feedback']">Feedback</a></li>
+    
+        </ul><hr><hr>
+    <router-outlet></router-outlet> `   <----this is to create space to render the webpages.
+})
+export class AppComponent {
+  title = 'batch235';
+}
+---------------------------------------------------------------------------------------------------------
+<p>Contact Page</p>
+<table>
+    <tr><td>Enter your Name</td><td><input type=text name=t1 size=20></td></tr>
+    <tr><td>Enter your Address</td><td><input type=text name=t2 size=20></td></tr>
+    <tr><td>Enter your Phone no</td><td><input type=text name=t3 size=20></td></tr>
+    <tr><td>Enter your Email</td><td><input type=text name=t4 size=20></td></tr>
+    <tr><td></td><td><input type=submit value="submit"></td></tr>
+    
+    </table>
+------------------------------------------------------------------------------------------------------------
+<p>FeedBack Page</p>
+<table>
+    <tr><td>Enter your Name</td><td><input type=text name=t1 size=20></td></tr>
+    <tr><td>Enter your Address</td><td><input type=text name=t2 size=20></td></tr>
+    <tr><td>Enter your Phone no</td><td><input type=text name=t3 size=20></td></tr>
+    <tr><td>Enter your Email</td><td><input type=text name=t4 size=20></td></tr>
+    <tr><td></td><td><input type=submit value="submit"></td></tr>
+    
+    </table>
+----------------------------------------------------------------------------
+<table>
+    <tr><td>Enter your Name</td><td><input type=text name=t1 size=20></td></tr>
+    <tr><td>Enter your Address</td><td><input type=text name=t2 size=20></td></tr>
+    <tr><td>Enter your Phone no</td><td><input type=text name=t3 size=20></td></tr>
+    <tr><td>Enter your Email</td><td><input type=text name=t4 size=20></td></tr>
+    <tr><td></td><td><input type=submit value="submit"></td></tr>
+    
+    </table>
+---------------------------------------------------------------------------------------
+app.module.ts
+-------------------------------
+It is a register where we will mention all the components like register,contact,feedback to be entered.
+
+import { NgModule } from '@angular/core';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';  <-----
+import { AppRoutingModule } from './app-routing.module';   
+import { AppComponent } from './app.component';
+import { RegisterComponent } from './register/register.component';
+import { ContactComponent } from './contact/contact.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+
+const appRoutes: Routes = [   <-------
+   { path: 'register', component: RegisterComponent },
+  { path: 'contact', component: ContactComponent },
+    { path: 'feedback', component: FeedbackComponent }
+  ];
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    RegisterComponent,
+    ContactComponent,
+    FeedbackComponent,
+   
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)  <------
+  ],
+  providers: [
+    provideClientHydration()
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+-------------------------------------------------------------------------------------
