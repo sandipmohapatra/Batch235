@@ -1,0 +1,14 @@
+Assignment-5
+------------------------------
+create an amazon website System
+1)registration ,
+3)check products available availability
+a)kids
+b)mens
+c)women
+4)buy goods
+5)return goods
+6)feedback
+-----------------------------------------------------
+Using Bootstap and Angular-17
+--------------------------------------------------------
