@@ -6,14 +6,14 @@ db.createUser({
   roles: [{ role: "readWrite", db: "your_database_name" }]
 });
 -------------------------------------------------------------------------------------------
-Angular 13
+Angular 17
 --------------------------
 1)Angular is an open source,cross platform,
 2)it provides end to end solution for building,debugging,testing and deploying.
 3)it provides testing framework like jasmine,karma,protractor.
 4)language used for angular is typescript.It support oops.(javascript-var)
 5)Framework supported are MVC,MVVM
-6)it is also used for cross flatform mobile and web appliaction.
+6)it is also used for cross platform mobile and web appliaction.
 7)it is used for SPA (single page application) .
 8)it has high speed and performance is better as compared to older technolgy 
 used webpages.
@@ -30,7 +30,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 steps for Installation
 --------------------------------------
 1)npm install -g @angular/cli
-2)C:\projects-workspace>ng new batch201
+2)C:\projects-workspace>ng new batch235 --no-standalone
 3)C:\projects-workspace\batch201>ng serve 
 4)Browser- Application starts on Live Server listening on http://localhost:4200
 To create subfolders
@@ -139,17 +139,25 @@ public product=
 {
 Name:'Samsung TV',
 Price:45000.44,
-}}
+Loc:'Pune'
+}
+}
 ----------------------------------------------------
 <dl>
-<dt>Name</dt>
-<dd>{{product.Name}}</dd>
-<dd><input type=text value={{product.Name}}></dd>
-<dt>Price</dt>
-<dd>{{product.Price}}</dd>
-<dd><input type=text value={{product.Price}}></dd>
-<dd innerHTML={{product.Price}}></dd>
-</dl>
+  <dt>Name</dt>
+  <dd>{{product.Name}}</dd>
+  <dd><input type=text value={{product.Name}}></dd>
+  <dt>Price</dt>
+  <dd>{{product.Price}}</dd>
+  <dd><input type=text value={{product.Price}}></dd>
+  <dd innerHTML={{product.Price}}></dd>
+  <dt>Location</dt>
+  <dd>{{product.Loc}}</dd>
+  <dd><input type=text value={{product.Loc}}></dd>
+  <dd innerHTML={{product.Loc}}></dd>
+  </dl>
+  The sum is = {{7+8}}
+  The sub is ={{8-6}}
 ------------------------------
 create folder
 ---------------------
