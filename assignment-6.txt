@@ -1,0 +1,14 @@
+Assignment-6
+Gim Management
+-------------------------------
+1)home page
+2)Registration page
+3)Table Table 
+4)Diet Page
+5)Contact page
+7)Payment Page
+8)Feedback page
+--------------------------------------------------------------------------
+*Pages should be very attractive
+using  Bootstrap and Angular17
+insert Images ...
